@@ -10,12 +10,6 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  /* Launch a development web server (or multiple) during the tests. */
-  webServer: {
-    command: 'yarn dev',
-    port: 3000,
-    timeout: 120 * 1000,
-  },
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -75,9 +69,9 @@ export default defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://127.0.0.1:3000',
+  webServer: {
+    command: 'yarn dev',
+    port: 5173,
   //   reuseExistingServer: !process.env.CI,
-  // },
+  },
 });
