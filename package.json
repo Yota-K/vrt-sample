@@ -12,9 +12,10 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "e2e:all": "playwright test",
-    "e2e:chromium": "playwright test --project=chromium",
-    "reg-suit:run": "reg-suit run"
+    "test:e2e": "npm-run-all -s playwright reg-suit",
+    "playwright": "playwright test",
+    "playwright:chromium": "playwright test --project=chromium",
+    "reg-suit": "reg-suit run"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -31,6 +32,7 @@
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "npm-run-all": "^4.1.5",
     "reg-keygen-git-hash-plugin": "^0.12.1",
     "reg-publish-s3-plugin": "^0.12.1",
     "reg-suit": "^0.12.1",
