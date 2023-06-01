@@ -12,11 +12,11 @@ function App() {
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Vite</h1>
       <p data-testid="count">{count}</p>
       <div className="card">
         <button type="button" data-testid="count-up-button" onClick={() => setCount((count) => count + 1)}>
-        count up
+        count up2
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
